@@ -84,7 +84,7 @@ public class MainPanel extends JPanel {
     private void updateClients(){
         clientsArea.setText("");
         for(Player p: ServerData.playerList){
-            clientsArea.append(p.getName()+", timer: "+ p.getStateTimer()+"\n");
+            clientsArea.append(p.getName()+", pos: " + p.getPosX() + " " + p.getPosY() + "\n");
         }
     }
 }

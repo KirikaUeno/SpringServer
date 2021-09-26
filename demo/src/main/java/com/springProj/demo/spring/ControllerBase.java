@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -29,11 +31,24 @@ public class ControllerBase {
         return "1";
     }
 
-    @GetMapping("/sendinput")
-    public int sendInput(@RequestParam(value = "name", defaultValue = "none") String name) {
-        String[] parts = name.split("-");
-        Objects.requireNonNull(ServerData.getPlayer(parts[0])).setStateTimer(Float.parseFloat(parts[1]));
+    @GetMapping("/sendinfo")
+    public int sendInfo(@RequestParam(value = "name", defaultValue = "none") String name,
+                        @RequestParam(value = "direction", defaultValue = "none") String direction,
+                        @RequestParam(value = "posX", defaultValue = "none") String posX,
+                        @RequestParam(value = "posY", defaultValue = "none") String posY,
+                        @RequestParam(value = "state", defaultValue = "none") String state) {
+        Objects.requireNonNull(ServerData.getPlayer(name)).updateInfo(direction, posX, posY, state);
         return 1;
+    }
+
+    @GetMapping("/getinfo")
+    public String getInfo() {
+        String info = "";
+        for(Player p: ServerData.playerList){
+            info+=p.getInfo();
+            info+="\n";
+        }
+        return info;
     }
 
     @GetMapping("/addplayer")

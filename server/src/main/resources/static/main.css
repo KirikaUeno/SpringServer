@@ -1,0 +1,53 @@
+body ul{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0%;
+}
+
+body li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row;
+}
+
+body p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 130%;
+}
+
+.value{
+    margin-left: 20px;
+}
+
+#information-from-stand{
+    display: flex;
+    width: auto;
+    height: auto;
+    position: fixed;
+    left: 15%;
+    top: 10%;
+    background-color: aliceblue;
+    border-radius: 2%;
+}
+
+#control-group{
+    display: flex;
+    width: auto;
+    height: auto;
+    position: fixed;
+    right: 15%;
+    top: 10%;
+    background-color: aliceblue;
+    border-radius: 2%;
+}
+
+.disable-select {
+    user-select:none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}

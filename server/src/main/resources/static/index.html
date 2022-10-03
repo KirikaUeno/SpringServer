@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Server check</title>
+</head>
+<body>
+    <div id="information-from-stand">
+        <ul>
+            <li>
+                <p>Cathode Temperature</p>
+                <p id="cathode-temperature" class="value"></p>
+            </li>
+            <li>
+                <p>Cathode Voltage</p>
+                <p id="cathode-voltage" class="value"></p>
+            </li>
+            <li>
+                <p>Cathode Current</p>
+                <p id="cathode-current" class="value"></p>
+            </li>
+            <li>
+                <p>Cathode Uptime</p>
+                <p id="cathode-uptime" class="value"></p>
+            </li>
+            <li>
+                <p>Filament Voltage</p>
+                <p id="filament-voltage" class="value"></p>
+            </li>
+            <li>
+                <p>Filament Current</p>
+                <p id="filament-current" class="value"></p>
+            </li>
+            <li>
+                <p>Power</p>
+                <p id="power" class="value"></p>
+            </li>
+            <li>
+                <p>Pi Temperature</p>
+                <p id="pi-temperature" class="value"></p>
+            </li>
+            <li>
+                <p>Pressure</p>
+                <p id="pressure" class="value"></p>
+            </li>
+        </ul>
+    </div>
+    <div id="control-group">
+        <ul>
+            <li>
+                <p>Cathode system on/off</p>
+                <input type="checkbox" id="cathode-on">
+            </li>
+            <li>
+                <p>Filament system on/off</p>
+                <input type="checkbox" id="filament-on">
+            </li>
+            <li>
+                <p>Cathode voltage</p>
+                <input type="range" id="cathode-voltage-input" min="0" max="100" class="value">
+            </li>
+            <li>
+                <p>Cathode current</p>
+                <input type="range" id="cathode-current-input" min="0" max="100" class="value">
+            </li>
+        </ul>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
